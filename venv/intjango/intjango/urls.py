@@ -31,3 +31,17 @@ urlpatterns = [
     path('hello/', views.hello), 
     path('hi/', views.hi),
 ]
+
+urlpatterns = [
+    path('blog/<int:port_id>/', views.blog_port),
+]
+
+
+urlpatterns = [
+    path('greet/<str:first_name>/<int:age>/', views.greet_user),
+]
+
+
+urlpatterns = [
+    path('weather/<str:city>/', views.city_weather),
+]
