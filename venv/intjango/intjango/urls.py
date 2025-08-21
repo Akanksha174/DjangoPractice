@@ -26,20 +26,20 @@ from django.contrib import admin
 from django.urls import path
 from . import views
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('hello/', views.hello), 
-    path('hi/', views.hi),
-]
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('hello/', views.hello), 
+#     path('hi/', views.hi),
+# ]
 
-urlpatterns = [
-    path('blog/<int:port_id>/', views.blog_port),
-]
+# urlpatterns = [
+#     path('blog/<int:port_id>/', views.blog_port),
+# ]
 
 
-urlpatterns = [
-    path('greet/<str:first_name>/<int:age>/', views.greet_user),
-]
+# urlpatterns = [
+#     path('greet/<str:first_name>/<int:age>/', views.greet_user),
+# ]
 
 
 urlpatterns = [
