@@ -26,3 +26,9 @@ def city_weather(request, city):
     message = weather_data.get(city, f"Sorry, no weather data available for {city}.")
     return HttpResponse(message)
 # 8931964303
+
+def profile(request, name):
+    return HttpResponse(f"Profile for user {name}")
+    re_path(r'^user/(?P<name>[a-z][A-Z]+)/$', user, name='user') 
+
+
