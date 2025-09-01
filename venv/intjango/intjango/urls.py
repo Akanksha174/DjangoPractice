@@ -50,4 +50,5 @@ from . import views
 
 urlpatterns = [
     path('odd/<int:n>/', views.odd),
+    path('reverse_string/<str:s>/', views.reverse_string),
 ]

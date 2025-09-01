@@ -37,3 +37,6 @@ def odd(request, n):
         return HttpResponse(f"Even number {n}")
     else:
         return HttpResponse(f"Odd number {n}")
+
+def reverse_string(request, s):  
+    return HttpResponse(s[::-1])
