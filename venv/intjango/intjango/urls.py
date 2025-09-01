@@ -42,6 +42,12 @@ from . import views
 # ]
 
 
+# urlpatterns = [
+#     path('weather/<str:city>/', views.city_weather),
+# ]
+
+
+
 urlpatterns = [
-    path('weather/<str:city>/', views.city_weather),
+    path('odd/<int:n>/', views.odd),
 ]
