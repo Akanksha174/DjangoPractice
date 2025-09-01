@@ -48,7 +48,11 @@ from . import views
 
 
 
+# urlpatterns = [
+#     path('odd/<int:n>/', views.odd),
+#     path('reverse_string/<str:s>/', views.reverse_string),
+# ]
+
 urlpatterns = [
-    path('odd/<int:n>/', views.odd),
-    path('reverse_string/<str:s>/', views.reverse_string),
+    path('diamond/', views.diamond_pattern, name='diamond_pattern'),
 ]
