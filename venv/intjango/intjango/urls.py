@@ -56,3 +56,7 @@ from . import views
 urlpatterns = [
     path('diamond/', views.diamond_pattern, name='diamond_pattern'),
 ]
+
+urlpatterns = [
+    path('home/', views.home, name='home'),  
+]
