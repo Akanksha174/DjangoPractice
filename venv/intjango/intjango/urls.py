@@ -64,9 +64,9 @@ from . import views
 from django.urls import re_path
 from . import views
 
-# urlpatterns = [
-#     re_path(r"^user/(?P<username>[a-zA-Z][a-zA-Z0-9]{3,10})/$", views.user_profile, name="user_profile"),
-# ]
+urlpatterns = [
+    re_path(r"^user/(?P<username>[a-zA-Z][a-zA-Z0-9]{3,10})/$", views.user_profile, name="user_profile"),
+]
 
 
 urlpatterns = [

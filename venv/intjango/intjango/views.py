@@ -146,8 +146,8 @@ from django.http import HttpResponse
 
 from django.http import HttpResponse
 
-# def user_profile(request, username):
-#     return HttpResponse(f"Welcome, {username}!")
+def user_profile(request, username):
+    return HttpResponse(f"Welcome, {username}!")
 
 
 from django.http import HttpResponse
