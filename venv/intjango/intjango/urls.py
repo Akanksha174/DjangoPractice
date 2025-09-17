@@ -53,10 +53,23 @@ from . import views
 #     path('reverse_string/<str:s>/', views.reverse_string),
 # ]
 
-urlpatterns = [
-    path('diamond/', views.diamond_pattern, name='diamond_pattern'),
-]
+# from django.contrib import admin
+# from django.urls import path, include
+
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('', include('myapp.urls')),
+# ]
+
+from django.urls import re_path
+from . import views
+
+# urlpatterns = [
+#     re_path(r"^user/(?P<username>[a-zA-Z][a-zA-Z0-9]{3,10})/$", views.user_profile, name="user_profile"),
+# ]
+
 
 urlpatterns = [
-    path('home/', views.home, name='home'),  
+    path("students/", views.student_list),
+    path("students/<int:id>/", views.student_detail),
 ]

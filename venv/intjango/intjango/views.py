@@ -128,19 +128,42 @@ from django.http import HttpResponse
 
 
 
-def home(request):
-    student = [        
-        {'name': 'John', 'is_active:' True},
-        {'name': 'Jane', 'is_active:' False},   
-    ]
-    body ={
-        'name': 'aka', 
-        'date' :date.today(),
-        'age': 20,
-        'items' :[1,2,3,4,5],
-        'all_student': student
-    }
+# def home(request):
+#     student = [        
+#         {'name': 'John', 'is_active:' True},
+#         {'name': 'Jane', 'is_active:' False},   
+#     ]
+#     body ={
+#         'name': 'aka', 
+#         'date' :date.today(),
+#         'age': 20,
+#         'items' :[1,2,3,4,5],
+#         'all_student': student
+#     }
 
-    return render(request, 'home.html', body)
+#     return render(request, 'home.html', body)
 
 
+from django.http import HttpResponse
+
+# def user_profile(request, username):
+#     return HttpResponse(f"Welcome, {username}!")
+
+
+from django.http import HttpResponse
+
+# Predefined student list (no database)
+students = [
+    {"id": 1, "name": "Akanksha", "age": 21},
+    {"id": 2, "name": "Sidd", "age": 20},
+]
+
+def student_list(request):
+    data = "<br>".join([f"{s['id']} - {s['name']}" for s in students])
+    return HttpResponse(data)
+
+def student_detail(request, id):
+    for s in students:
+        if s["id"] == id:
+            return HttpResponse(f"ID: {s['id']}, Name: {s['name']}, Age: {s['age']}",)
+    return HttpResponse("Student not found!")
